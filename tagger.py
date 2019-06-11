@@ -5,7 +5,7 @@ from rasa.nlu.model import Trainer
 
 from tag import Tag, TAGS
 
-CONFIDENCE_THRESHOLD = 0.4
+CONFIDENCE_THRESHOLD = 0.3
 COMPANY_STRUCTURES = ['ltd', 'plc']
 
 class Tagger:

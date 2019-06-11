@@ -5,5 +5,5 @@
 - AG
 
 ## intent:shareholder
-- gesellschafter
-- mehrheitseigner
+- Gesellschafter
+- Mehrheitseigner
