@@ -32,7 +32,7 @@ class TestTaqgger(unittest.TestCase):
             },
             {
                 "text": "Can my company be shareholder of a limited company?",
-                "tags": {1,4,5}
+                "tags": {1,3,5}
             },
             {
                 "text": "Can my company be shareholder of a public corporate?",
