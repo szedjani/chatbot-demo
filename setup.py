@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="chatbot_demo",
-    version="0.0.7",
+    version="0.0.9",
     author="Janos Szedelenyi",
     author_email="janos.szedelenyi@gmail.com",
     description="A small demonstration of a chatbot engine",
@@ -21,4 +21,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
     ],
+    package_data={
+        '': ['*.md'],
+    }
 )

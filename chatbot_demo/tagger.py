@@ -25,7 +25,7 @@ class Tagger:
 
         self.interpreters = {}
         for lang in languages:
-            filepath = resource_filename(__name__, f'data/nlu_{lang}.md')
+            filepath = resource_filename(__name__, f'nlu_{lang}.md')
             training_data = load_data(filepath)
             trainer = Trainer(RasaNLUModelConfig({"pipeline": pipeline}))
             self.interpreters[lang] = trainer.train(training_data)

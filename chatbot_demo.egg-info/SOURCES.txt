@@ -1,6 +1,8 @@
 README.md
 setup.py
 chatbot_demo/__init__.py
+chatbot_demo/nlu_de.md
+chatbot_demo/nlu_en.md
 chatbot_demo/tag.py
 chatbot_demo/tagger.py
 chatbot_demo.egg-info/PKG-INFO
