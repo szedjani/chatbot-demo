@@ -29,7 +29,6 @@ class Tagger:
     @staticmethod
     def convert_confidences_to_tags(confidences):
         tags = []
-        print(confidences)
         for intent in confidences['intent_ranking']:
             if intent['confidence'] > CONFIDENCE_THRESHOLD:
                 tags.append(TAGS[intent['name']])
