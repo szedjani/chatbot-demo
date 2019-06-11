@@ -1,3 +1,4 @@
+import langdetect
 from rasa.nlu import load_data
 from rasa.nlu.config import RasaNLUModelConfig
 from rasa.nlu.model import Trainer
@@ -23,7 +24,7 @@ class Tagger:
 
     @staticmethod
     def detect_language(message):
-        return "en"
+        return langdetect.detect(message)
 
     @staticmethod
     def convert_confidences_to_tags(confidences):

@@ -10,10 +10,10 @@ class TestTaqgger(unittest.TestCase):
         cls.tagger = Tagger(["en", "de"])
 
     def test_english_detection(self):
-        self.assertEqual(TestTaqgger.tagger.tag("Hello"), {1})
+        self.assertEqual(TestTaqgger.tagger.tag("This is an English sentence."), {1})
 
     def test_german_detection(self):
-        self.assertEqual(TestTaqgger.tagger.tag("Hallo"), {2})
+        self.assertEqual(TestTaqgger.tagger.tag("Dies ist ein deutscher Satz."), {2})
 
     def test_sentences(self):
 
