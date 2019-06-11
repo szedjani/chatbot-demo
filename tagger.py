@@ -2,7 +2,10 @@ from rasa.nlu import load_data
 from rasa.nlu.config import RasaNLUModelConfig
 from rasa.nlu.model import Trainer
 
-from tag import Tag
+from tag import Tag, TAGS
+
+CONFIDENCE_THRESHOLD = 0.5
+COMPANY_STRUCTURES = ['ltd', 'plc']
 
 class Tagger:
     def __init__(self, languages):
@@ -24,16 +27,21 @@ class Tagger:
 
     @staticmethod
     def convert_confidences_to_tags(confidences):
+        tags = []
         print(confidences)
-        return []
+        for intent in confidences['intent_ranking']:
+            if intent['confidence'] > CONFIDENCE_THRESHOLD:
+                tags.append(TAGS[intent['name']])
+
+        return tags
 
     def tag(self, message):
-        returned_tags = []
+        detected_tags = []
 
         lang = self.detect_language(message)
-        returned_tags.append(Tag("Lang", lang))
+        detected_tags.append(TAGS[lang])
 
-        returned_tags += self.convert_confidences_to_tags(self.interpreters[lang].parse(message))
+        detected_tags += self.convert_confidences_to_tags(self.interpreters[lang].parse(message))
 
-        return returned_tags
+        return [x.id for x in detected_tags]
 
