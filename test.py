@@ -22,40 +22,41 @@ class TestTaqgger(unittest.TestCase):
         sentences = [
             {
                 "text": "Can I be shareholder of a limited company?",
-                "tags": {1,3,5}
+                "tags": {1, 3, 5}
             },
             {
                 "text": "I want to become shareholder of a limited company.",
-                "tags": {1,3,5}
+                "tags": {1, 3, 5}
             },
             {
                 "text": "Can I be shareholder of a limited public corporate?",
-                "tags": {1,4,5}
+                "tags": {1, 4, 5}
             },
             {
                 "text": "Can my company be shareholder of a limited company?",
-                "tags": {1,3,5}
+                "tags": {1, 3, 5}
             },
             {
                 "text": "Can my company be shareholder of a public corporate?",
-                "tags": {1,4,5}
+                "tags": {1, 4, 5}
             },
             {
                 "text": "Kann ich Gesellschafter einer GmbH sein?",
-                "tags": {2,3,5}
+                "tags": {2, 3, 5}
             },
             {
                 "text": "Wer kann Gesellschafter einer AG sein?",
-                "tags": {2,4,5}
+                "tags": {2, 4, 5}
             },
             {
                 "text": "Kann ich mit meiner GmbH Mehrheitseigner einer AG sein?",
-                "tags": {2,3,4,5}
+                "tags": {2, 3, 4, 5}
             },
         ]
 
         for sentence in sentences:
             self.assertEqual(self.tagger.tag(sentence["text"]), sentence["tags"])
+
 
 if __name__ == '__main__':
     unittest.main()
