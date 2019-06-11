@@ -5,6 +5,8 @@ from chatbot_demo import Tagger
 
 class TestTaqgger(unittest.TestCase):
 
+    tagger = None
+
     @classmethod
     def setUpClass(cls):
         cls.tagger = Tagger(["en", "de"])

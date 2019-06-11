@@ -18,7 +18,7 @@ class Tagger:
 
         self.interpreters = {}
         for lang in languages:
-            training_data = load_data(f'data/nlu_{lang}.md')
+            training_data = load_data(f'chatbot_demo/data/nlu_{lang}.md')
             trainer = Trainer(RasaNLUModelConfig({"pipeline": pipeline}))
             self.interpreters[lang] = trainer.train(training_data)
 
