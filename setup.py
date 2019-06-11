@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="chatbot-demo",
-    version="0.0.1",
+    version="0.0.2",
     author="Janos Szedelenyi",
     author_email="janos.szedelenyi@gmail.com",
     description="A small demonstration of a chatbot engine",

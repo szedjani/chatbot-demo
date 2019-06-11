@@ -1,9 +1,9 @@
 README.md
 setup.py
+chatbot-demo/__init__.py
+chatbot-demo/tag.py
+chatbot-demo/tagger.py
 chatbot_demo.egg-info/PKG-INFO
 chatbot_demo.egg-info/SOURCES.txt
 chatbot_demo.egg-info/dependency_links.txt
 chatbot_demo.egg-info/top_level.txt
-package/__init__.py
-package/tag.py
-package/tagger.py
