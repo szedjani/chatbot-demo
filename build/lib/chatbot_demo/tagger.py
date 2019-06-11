@@ -3,13 +3,20 @@ from rasa.nlu import load_data
 from rasa.nlu.config import RasaNLUModelConfig
 from rasa.nlu.model import Trainer
 
-from package.tag import TAGS
+from pkg_resources import resource_filename
 
-CONFIDENCE_THRESHOLD = 0.3
+from chatbot_demo.tag import TAGS
+
+CONFIDENCE_THRESHOLD = 0.1
 COMPANY_STRUCTURES = ['ltd', 'plc']
 
+
 class Tagger:
-    def __init__(self, languages):
+    def __init__(self, languages=None):
+
+        if languages is None:
+            languages = ['en', 'de']
+
         pipeline = [{"name": "WhitespaceTokenizer"},
                     {"name": "CRFEntityExtractor"},
                     {"name": "EntitySynonymMapper"},
@@ -18,7 +25,8 @@ class Tagger:
 
         self.interpreters = {}
         for lang in languages:
-            training_data = load_data(f'data/nlu_{lang}.md')
+            filepath = resource_filename(__name__, f'data/nlu_{lang}.md')
+            training_data = load_data(filepath)
             trainer = Trainer(RasaNLUModelConfig({"pipeline": pipeline}))
             self.interpreters[lang] = trainer.train(training_data)
 
@@ -44,4 +52,3 @@ class Tagger:
         detected_tags += self.convert_confidences_to_tags(self.interpreters[lang].parse(message))
 
         return set([x.id for x in detected_tags])
-
