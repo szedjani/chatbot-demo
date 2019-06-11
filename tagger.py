@@ -4,7 +4,7 @@ from rasa.nlu.model import Trainer
 
 from tag import Tag, TAGS
 
-CONFIDENCE_THRESHOLD = 0.5
+CONFIDENCE_THRESHOLD = 0.4
 COMPANY_STRUCTURES = ['ltd', 'plc']
 
 class Tagger:
@@ -43,5 +43,5 @@ class Tagger:
 
         detected_tags += self.convert_confidences_to_tags(self.interpreters[lang].parse(message))
 
-        return [x.id for x in detected_tags]
+        return set([x.id for x in detected_tags])
 
