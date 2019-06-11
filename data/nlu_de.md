@@ -6,3 +6,4 @@
 
 ## intent:shareholder
 - gesellschafter
+- mehrheitseigner
