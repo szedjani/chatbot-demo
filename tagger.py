@@ -6,7 +6,12 @@ from tag import Tag
 
 class Tagger:
     def __init__(self, languages):
-        pipeline = [{"name": "supervised_embeddings"}]
+        pipeline = [{"name": "WhitespaceTokenizer"},
+                    {"name": "CRFEntityExtractor"},
+                    {"name": "EntitySynonymMapper"},
+                    {"name": "CountVectorsFeaturizer"},
+                    {"name": "EmbeddingIntentClassifier"}]
+
         self.interpreters = {}
         for lang in languages:
             training_data = load_data(f'data/nlu_{lang}.md')
