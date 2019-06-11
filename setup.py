@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="chatbot-demo",
-    version="0.0.2",
+    name="chatbot_demo",
+    version="0.0.4",
     author="Janos Szedelenyi",
     author_email="janos.szedelenyi@gmail.com",
     description="A small demonstration of a chatbot engine",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="https://github.com/szedjani/chatbot-demo",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

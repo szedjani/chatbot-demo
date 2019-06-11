@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
 Name: chatbot-demo
-Version: 0.0.2
+Version: 0.0.4
 Summary: A small demonstration of a chatbot engine
-Home-page: https://github.com/pypa/sampleproject
+Home-page: https://github.com/szedjani/chatbot-demo
 Author: Janos Szedelenyi
 Author-email: janos.szedelenyi@gmail.com
 License: UNKNOWN
