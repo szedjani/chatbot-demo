@@ -1,6 +1,6 @@
 import unittest
 
-from tagger import Tagger
+from package.tagger import Tagger
 
 
 class TestTaqgger(unittest.TestCase):

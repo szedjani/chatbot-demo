@@ -3,7 +3,7 @@ from rasa.nlu import load_data
 from rasa.nlu.config import RasaNLUModelConfig
 from rasa.nlu.model import Trainer
 
-from tag import Tag, TAGS
+from package.tag import TAGS
 
 CONFIDENCE_THRESHOLD = 0.3
 COMPANY_STRUCTURES = ['ltd', 'plc']
