@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: chatbot-demo
-Version: 0.0.4
+Version: 0.0.5
 Summary: A small demonstration of a chatbot engine
 Home-page: https://github.com/szedjani/chatbot-demo
 Author: Janos Szedelenyi
@@ -9,6 +9,5 @@ License: UNKNOWN
 Description: UNKNOWN
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Description-Content-Type: text/markdown

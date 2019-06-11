@@ -1,6 +1,6 @@
 import unittest
 
-from package.tagger import Tagger
+from chatbot_demo import Tagger
 
 
 class TestTaqgger(unittest.TestCase):
