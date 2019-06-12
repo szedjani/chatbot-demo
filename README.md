@@ -15,7 +15,7 @@ This is the core file of the solution: https://github.com/szedjani/chatbot-demo/
 
 # Installation
 
-The module can be installed using the following command:
+The module can be installed using the following command (it will install its dependencies as well):
 
 `pip install git+https://github.com/szedjani/chatbot-demo.git`
 
@@ -31,7 +31,7 @@ It would print `[1,3,5]`
 
 # Development
 
-First install the modules `Rasa` and `langdetect` (pip would install them automatically), then clone the project.
+Clone the project and install the `rasa` and `langdetect` modules.
 
 # Evaluation
 
