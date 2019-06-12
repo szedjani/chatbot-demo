@@ -22,7 +22,7 @@ The module can be installed using the following command (it will install its dep
 # Usage
 
 ```python
-import chatbot_demo
+from chatbot_demo import Tagger
 tagger = Tagger()
 print(tagger.tag("Can I be shareholder of a limited company?"))
 ```
