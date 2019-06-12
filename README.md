@@ -7,6 +7,8 @@ This is a demo chatbot module. It tags short texts using the following tags:
 
 The solution is unit-tested and the code style complies with PEP-8 standards.
 
+This is the core file of the solution: https://github.com/szedjani/chatbot-demo/blob/master/chatbot_demo/tagger.py
+
 # Requirements
 * Python 3.6 (Tensorflow do not support 3.7 on Windows.)
 * Tested only on Windows 10.
